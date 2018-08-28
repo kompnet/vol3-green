@@ -1,0 +1,2 @@
+module DailyMealsHelper
+end

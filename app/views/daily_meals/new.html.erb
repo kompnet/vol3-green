@@ -1,0 +1,8 @@
+<h1>Offer meals for <%= Date.today %></h1>
+
+<div class="container">
+  <%= form_for @daily_meal, url: catering_daily_meals_path, method: 'post' do |f| %>
+    <%= f.select :meal, options_for_select(@meals.collect { |i| [i.name, i.id] }), {}, {:multiple => true, :class => "chzn-select", :style => "width:450px;" } %>
+    <%= f.submit %>
+  <% end %>
+</div>
